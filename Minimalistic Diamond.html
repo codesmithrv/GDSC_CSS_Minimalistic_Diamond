@@ -1,0 +1,88 @@
+<DOCTYPE html>
+    <html lang="en">
+        <head> <meta charset=UTF-8>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Minimalistic Diamond</title>
+        </head>
+        <body>
+            <div class="diamond">
+                <div class="shard left1"></div>
+                <div class="shard left2"></div>
+                <div class="shard middle"></div>
+                <div class="shard right1"></div>
+                <div class="shard right2"></div>
+            </div> 
+            <style>
+                *{
+                    margin: 0;
+                    padding: 0;
+                }
+                .diamond{
+                    position: absolute;
+                    top: 40%;
+                    left: 45%;
+                    transform: translate(-40%, -45%);
+                }
+                .shard{
+                    position: absolute;
+                    border-style: solid;
+                }
+                .middle{
+                    top: -40px;
+                    left: 0;
+                    border-width: 40px 50px;
+                    border-color: transparent transparent rgb(194,159,117) transparent;
+                }
+                .left1{
+                    top: 0;
+                    left: -40px;
+                    border-width: 40px 50px 40px 40px;
+                    border-color: rgb(233,191,143) transparent transparent transparent;
+                }
+                .left2{
+                    top: -40px;
+                    left: -70px;
+                    border-width: 40px 40px 40px 30px;
+                    border-color: transparent transparent rgb(194,159,117) transparent;
+                }
+                .right1{
+                    top: 0;
+                    right: -140px;
+                    border-width: 40px 40px 40px 50px;
+                    border-color: rgb(233,191,143) transparent transparent transparent;
+                }
+                .right2{
+                    top: -40;
+                    right: -170px;
+                    border-width: 40px 30px 40px 40px;
+                    border-color: transparent transparent rgb(194,159,117) transparent;
+                }
+
+                .middle::before, .left2::before, .right2::before{
+                    content: ' ';
+                    position: absolute;
+                    top: 40px;
+                    border-style: solid;
+                }
+                .middle::before{
+                    left: -50px;
+                    border-width: 170px 50px 0 50px;
+                    border-color: rgb(214,175,132) transparent transparent transparent;
+                    z-index: 2;
+                }
+                .left2::before{
+                    left: -7px;
+                    border-width: 170px 10px 0 74px;
+                    border-color: rgb(233,191,143) transparent transparent transparent;
+                    transform: skewX(15deg);
+                }
+                .right2::before{
+                    right: -7px;
+                    border-width: 170px 74px 0 10px;
+                    border-color: rgb(233,191,143) transparent transparent transparent;
+                    transform: skewX(-15deg);
+                }
+            </style>
+        </body>
+    </html>
+</DOCTYPE>
