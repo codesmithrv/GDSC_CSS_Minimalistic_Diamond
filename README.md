@@ -1,1 +1,6 @@
-# GDSC_CSS_Minimalistic_Diamond
+# CSS BATTLE
+Minimalistic_Diamond
+## Author
+Name- "Sayandeep Pal" <br>
+Branch- "CSE DATA SCIENCE" <br>
+Year- "2nd" 
